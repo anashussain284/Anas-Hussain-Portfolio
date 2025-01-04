@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional Portfolio of a Freelance Web Developer specializing in scalable web solutions.">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Portfolio, Web Developer, PHP, Laravel, Freelance Developer">
+    <title>Portfolio | Your Name</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .hero {
+            background: linear-gradient(to right, #4f46e5, #6d28d9);
+            color: white;
+        }
+
+        .portfolio-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #d1d5db;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 4rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 0;
+            padding-right: 4rem;
+            text-align: right;
+        }
+
+        .timeline-item .circle {
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            width: 1rem;
+            height: 1rem;
+            background: #6d28d9;
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(even) .circle {
+            right: -1rem;
+            left: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal">
+
+    <!-- Header Section -->
+    <header class="hero py-12 text-center">
+        <h1 class="text-4xl font-bold">Hi, I'm Your Name</h1>
+        <p class="text-xl mt-4">Freelance Web Developer | PHP | Laravel | Scalable Web Solutions</p>
+        <div class="mt-6">
+            <a href="#contact"
+                class="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-gray-200">Hire
+                Me</a>
+            <a href="resume.pdf" target="_blank"
+                class="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-gray-200 ml-4">Resume</a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-12 px-4 md:px-20 bg-white">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">About Me</h2>
+        <div class="max-w-4xl mx-auto text-center mt-8">
+            <img src="assets/image/anas-home-img.png" alt="Your Photo" class="about-image mx-auto mb-4">
+            <p class="text-gray-600 text-lg mt-4">
+                I'm a passionate web developer with expertise in PHP, Laravel, and scalable web solutions. I help
+                businesses build robust and efficient platforms to achieve their goals. When not coding, I enjoy
+                exploring new technologies and mentoring aspiring developers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-12 px-4 md:px-20">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">My Work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <!-- Example Project -->
+            <div class="portfolio-card bg-white rounded-lg shadow-lg p-6">
+                <img src="https://via.placeholder.com/400x200" alt="Project Thumbnail" class="rounded-t-lg w-full">
+                <h3 class="text-xl font-semibold mt-4">E-Commerce Platform</h3>
+                <p class="text-gray-600 mt-2">Built a scalable e-commerce platform handling 50,000+ transactions daily
+                    using Laravel.</p>
+                <button onclick="openModal('ecommerceModal')"
+                    class="text-purple-700 font-semibold mt-4 inline-block">Read More</button>
+            </div>
+
+            <!-- Modal for Project Details -->
+            <div id="ecommerceModal"
+                class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+                    <button onclick="closeModal('ecommerceModal')"
+                        class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                    <h3 class="text-2xl font-semibold mb-4">E-Commerce Platform</h3>
+                    <p class="text-gray-600 mb-2"><strong>Project Overview:</strong> Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed sit amet tincidunt purus. Integer non felis nec justo ultricies
+                        gravida eget non purus.</p>
+                    <p class="text-gray-600 mb-2"><strong>Tech Stacks:</strong> Laravel, MySQL, Tailwind CSS, Redis,
+                        WebSockets</p>
+                    <p class="text-gray-600 mb-2"><strong>My Contributions:</strong> Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Curabitur nec vulputate urna.</p>
+                    <p class="text-gray-600 mb-2"><strong>Struggles:</strong> Fusce scelerisque interdum purus, vel
+                        lobortis ligula iaculis at.</p>
+                    <p class="text-gray-600 mb-2"><strong>Solutions:</strong> Integer ut suscipit nulla. Sed sit amet
+                        urna neque. Etiam vel nisi ut ligula vehicula pretium.</p>
+                    <p class="text-gray-600 mb-2"><strong>What I Learned:</strong> Integer feugiat, ante at facilisis
+                        faucibus, nisl purus bibendum ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 px-4 md:px-20 bg-gray-50">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <i class="fas fa-code text-purple-700 text-4xl"></i>
+                <h3 class="text-xl font-semibold mt-4">Web Development</h3>
+                <p class="text-gray-600 mt-2">Custom websites tailored to your business needs.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <i class="fas fa-cogs text-purple-700 text-4xl"></i>
+                <h3 class="text-xl font-semibold mt-4">API Development</h3>
+                <p class="text-gray-600 mt-2">Seamless integration of third-party services and APIs.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <i class="fas fa-rocket text-purple-700 text-4xl"></i>
+                <h3 class="text-xl font-semibold mt-4">Performance Optimization</h3>
+                <p class="text-gray-600 mt-2">Enhance website speed and scalability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-12 px-4 md:px-20 bg-gray-50">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Technologies I Use</h2>
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mt-8 text-center">
+            <div class="text-gray-600">
+                <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                <p class="mt-2">HTML</p>
+            </div>
+            <div class="text-gray-600">
+                <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                <p class="mt-2">CSS</p>
+            </div>
+            <div class="text-gray-600">
+                <i class="fab fa-js-square text-4xl text-yellow-500"></i>
+                <p class="mt-2">JavaScript</p>
+            </div>
+            <div class="text-gray-600">
+                <i class="fab fa-php text-4xl text-purple-700"></i>
+                <p class="mt-2">PHP</p>
+            </div>
+            <div class="text-gray-600">
+                <i class="fab fa-laravel text-4xl text-red-500"></i>
+                <p class="mt-2">Laravel</p>
+            </div>
+            <div class="text-gray-600">
+                <i class="fab fa-react text-4xl text-blue-500"></i>
+                <p class="mt-2">React</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-4 md:px-20 bg-white">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Contact</h2>
+        <div class="max-w-lg mx-auto mt-8">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required
+                    class="w-full p-4 bg-gray-100 border border-gray-300 rounded-lg mb-4">
+                <input type="email" name="email" placeholder="Your Email" required
+                    class="w-full p-4 bg-gray-100 border border-gray-300 rounded-lg mb-4">
+                <textarea name="message" placeholder="Your Message" required
+                    class="w-full p-4 bg-gray-100 border border-gray-300 rounded-lg mb-4" rows="6"></textarea>
+                <button type="submit" class="w-full bg-purple-700 text-white py-3 rounded-lg">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-8 bg-gray-800 text-center text-white">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal JS Functions -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>

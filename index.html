@@ -11,210 +11,8 @@
     <title>Anas Hussain M</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 0;
-        }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to right, #4f46e5, #6d28d9);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Portfolio Card Hover Effect */
-        .portfolio-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 3rem;
-            background-color: #fff;
-            border-radius: 1.25rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        .about-image {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 3px solid #6d28d9;
-        }
-
-        /* Timeline Styles */
-        .timeline {
-            position: relative;
-            margin: 4rem 0;
-            padding: 2rem 0;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #d1d5db;
-            transform: translateX(-50%);
-        }
-
-        /* Timeline Item Styles */
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-            padding-left: 5rem;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 0;
-            padding-right: 5rem;
-            text-align: right;
-        }
-
-        .timeline-item .circle {
-            position: absolute;
-            top: 0;
-            left: -1.25rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: #6d28d9;
-            border-radius: 50%;
-            border: 3px solid #fff;
-        }
-
-        .timeline-item:nth-child(even) .circle {
-            right: -1.25rem;
-            left: auto;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #4b5563;
-        }
-
-        .timeline-item p {
-            font-size: 1.125rem;
-            color: #6b7280;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item p span {
-            font-weight: 600;
-            color: #4b5563;
-        }
-
-        /* Hidden Elements */
-        .hidden {
-            display: none;
-        }
-
-        /* Fade In Animation */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .timeline-item {
-                width: 100%;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .timeline-item:nth-child(even) {
-                left: 0;
-                text-align: left;
-            }
-
-            .timeline::before {
-                left: 2%;
-                width: 2px;
-            }
-        }
-
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-
-        .text-left {
-            text-align: left;
-        }
-
-        .font-semibold {
-            font-weight: 600;
-        }
-
-        .font-bold {
-            font-weight: 700;
-        }
-
-        .text-gray-800 {
-            color: #2d3748;
-        }
-
-        .text-gray-500 {
-            color: #6b7280;
-        }
-
-        .text-purple-700 {
-            color: #6d28d9;
-        }
-
-        .bg-gradient-to-r {
-            background-image: linear-gradient(to right, #4f46e5, #6d28d9);
-        }
-
-        .bg-white {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
@@ -222,7 +20,7 @@
 
     <!-- Header Section -->
     <header class="hero py-12 text-center">
-        <h1 class="text-4xl font-bold">Hi, I'm Your Name</h1>
+        <h1 class="text-4xl font-bold">Hi, I'm Anas Hussain</h1>
         <p class="text-xl mt-4">Freelance Web Developer | PHP | Laravel | Scalable Web Solutions</p>
         <div class="mt-6">
             <a href="#contact"
@@ -553,14 +351,18 @@
 
     <!-- Footer Section -->
     <footer class="py-6 bg-gray-800 text-white text-center">
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Anas Hussain. All Rights Reserved.</p>
         <div class="mt-4">
-            <a href="https://linkedin.com" target="_blank" class="text-gray-400 mx-2 hover:text-white"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank" class="text-gray-400 mx-2 hover:text-white"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://stackoverflow.com" target="_blank" class="text-gray-400 mx-2 hover:text-white"><i
-                    class="fab fa-stack-overflow"></i></a>
+            <a title="Linkedin" href="https://www.linkedin.com/in/anashussain284" target="_blank"
+                class="text-gray-400 mx-2 hover:text-white"><i class="fab fa-linkedin"></i></a>
+            <a title="Github" href="https://github.com/anashussain284" target="_blank"
+                class="text-gray-400 mx-2 hover:text-white"><i class="fab fa-github"></i></a>
+            <a title="Stackoverflow" href="https://stackoverflow.com/users/14830068/anas-hussain-m" target="_blank"
+                class="text-gray-400 mx-2 hover:text-white"><i class="fab fa-stack-overflow"></i></a>
+            <a title="Dev.to" href="https://dev.to/anashussain284" target="_blank"
+                class="text-gray-400 mx-2 hover:text-white"><i class="fa-brands fa-dev"></i></a>
+            <a title="Leetcode" href="https://leetcode.com/u/anashussain284/" target="_blank"
+                class="text-gray-400 mx-2 hover:text-white"><i class="fa fa-code" aria-hidden="true"></i></a>
         </div>
     </footer>
 

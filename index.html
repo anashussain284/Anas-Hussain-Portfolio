@@ -8,29 +8,57 @@
         content="Professional Portfolio of a Freelance Web Developer specializing in scalable web solutions.">
     <meta name="author" content="Your Name">
     <meta name="keywords" content="Portfolio, Web Developer, PHP, Laravel, Freelance Developer">
-    <title>Real-Portfolio | Your Name</title>
+    <title>Anas Hussain M</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
-        /* Custom Styles */
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
         .hero {
             background: linear-gradient(to right, #4f46e5, #6d28d9);
             color: white;
+            padding: 4rem 0;
+            text-align: center;
         }
 
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Portfolio Card Hover Effect */
         .portfolio-card {
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .portfolio-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
+        /* About Section */
         .about-section {
-            padding: 2rem;
-            border-radius: 1rem;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            background-color: #fff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 2rem auto;
+            text-align: center;
         }
 
         .about-image {
@@ -38,13 +66,17 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border: 3px solid #6d28d9;
         }
 
+        /* Timeline Styles */
         .timeline {
             position: relative;
-            margin: 2rem 0;
-            padding: 1rem 0;
+            margin: 4rem 0;
+            padding: 2rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .timeline::before {
@@ -53,57 +85,68 @@
             left: 50%;
             top: 0;
             bottom: 0;
-            width: 2px;
+            width: 3px;
             background: #d1d5db;
             transform: translateX(-50%);
         }
 
+        /* Timeline Item Styles */
         .timeline-item {
             position: relative;
-            margin-bottom: 2rem;
-            padding-left: 4rem;
+            margin-bottom: 2.5rem;
+            padding-left: 5rem;
             width: 50%;
         }
 
         .timeline-item:nth-child(even) {
             left: 50%;
             padding-left: 0;
-            padding-right: 4rem;
+            padding-right: 5rem;
             text-align: right;
         }
 
         .timeline-item .circle {
             position: absolute;
             top: 0;
-            left: -1rem;
-            width: 1rem;
-            height: 1rem;
+            left: -1.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
             background: #6d28d9;
             border-radius: 50%;
+            border: 3px solid #fff;
         }
 
         .timeline-item:nth-child(even) .circle {
-            right: -1rem;
+            right: -1.25rem;
             left: auto;
         }
 
         .timeline-item h3 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            color: #4b5563;
         }
 
         .timeline-item p {
-            font-size: 1rem;
+            font-size: 1.125rem;
             color: #6b7280;
+            margin-bottom: 0.5rem;
         }
 
+        .timeline-item p span {
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        /* Hidden Elements */
         .hidden {
             display: none;
         }
 
+        /* Fade In Animation */
         .fade-in {
-            animation: fadeIn 0.3s ease-in-out;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -115,7 +158,64 @@
                 opacity: 1;
             }
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+                text-align: left;
+            }
+
+            .timeline::before {
+                left: 2%;
+                width: 2px;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .text-gray-800 {
+            color: #2d3748;
+        }
+
+        .text-gray-500 {
+            color: #6b7280;
+        }
+
+        .text-purple-700 {
+            color: #6d28d9;
+        }
+
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, #4f46e5, #6d28d9);
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
     </style>
+
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal">
@@ -211,7 +311,7 @@
     </section>
 
     <!-- Technologies Section -->
-    <section id="technologies" class="py-12 px-4 md:px-20 bg-gray-50">
+    <section id="technologies" class="py-12 px-4 md:px-20">
         <h2 class="text-3xl font-bold text-gray-800 text-center">Technologies I Use</h2>
         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mt-8 text-center">
             <div class="text-gray-600">
@@ -265,94 +365,141 @@
         </div>
     </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="py-12 px-6 md:px-20 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100">
-        <h2 class="text-3xl font-bold text-gray-800 text-center">Work Experience</h2>
-        <div class="timeline mt-8 max-w-5xl mx-auto">
-
-            <!-- Experience Item 1 -->
-            <div
-                class="timeline-item bg-white shadow-xl rounded-lg overflow-hidden mb-10 transition-transform transform hover:scale-105 duration-300 ease-in-out">
-                <div class="flex items-center justify-between p-6 border-b-2 border-gray-200">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-semibold text-purple-700">Senior Software Engineer</h3>
-                        <p class="text-lg text-purple-500">XYZ Company</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-sm text-gray-500">Jan 2020 - Present</p>
-                        <p class="font-bold text-gray-600">Duration: 5 years</p>
-                    </div>
+    <!-- Experience Section -->
+    <section id="testimonials" class="py-12 px-4 md:px-20  bg-gray-50">
+        <h2 class="text-3xl font-bold text-center">Experience</h2>
+        <div class="mt-8 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Experience Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
-                <div class="p-6">
-                    <p class="text-gray-700">Developed scalable web solutions using Laravel, improving system efficiency
-                        by 30%. Led a team of developers and ensured the seamless integration of APIs to enhance
-                        functionality and performance.</p>
-                    <p class="mt-3 text-sm text-gray-600"><span class="font-semibold text-gray-800">Location:</span> New
-                        York, USA</p>
-                    <p class="mt-1 text-sm text-gray-600"><span class="font-semibold text-gray-800">Work Type:</span>
-                        Hybrid</p>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Senior Web Developer and Team Lead</h3>
+                    <p class="text-gray-600">Mar 2022 - Dec 2024 · 2 yrs 10 mos</p>
+                    <p class="mt-2 text-gray-500">Specialized in software engineering and data structures. Developed
+                        multiple projects focusing on web technologies.</p>
                 </div>
             </div>
 
-            <!-- Experience Item 2 -->
-            <div
-                class="timeline-item bg-white shadow-xl rounded-lg overflow-hidden mb-10 transition-transform transform hover:scale-105 duration-300 ease-in-out">
-                <div class="flex items-center justify-between p-6 border-b-2 border-gray-200">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-semibold text-purple-700">Web Developer</h3>
-                        <p class="text-lg text-purple-500">ABC Corp</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-sm text-gray-500">Jun 2017 - Dec 2019</p>
-                        <p class="font-bold text-gray-600">Duration: 2.5 years</p>
-                    </div>
+            <!-- Experience Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
-                <div class="p-6">
-                    <p class="text-gray-700">Built custom web applications, integrated APIs to streamline business
-                        processes, and collaborated with cross-functional teams to improve user experiences and drive
-                        business growth.</p>
-                    <p class="mt-3 text-sm text-gray-600"><span class="font-semibold text-gray-800">Location:</span> San
-                        Francisco, USA</p>
-                    <p class="mt-1 text-sm text-gray-600"><span class="font-semibold text-gray-800">Work Type:</span>
-                        On-site</p>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Bachelor of Computer Applications</h3>
+                    <p class="text-gray-600">ABC University, 2015</p>
+                    <p class="mt-2 text-gray-500">Focused on computer programming, algorithms, and database management
+                        systems. Completed a major project on web-based applications.</p>
                 </div>
             </div>
 
+            <!-- Experience Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Doctor of Computer Science</h3>
+                    <p class="text-gray-600">DEF University, 2023</p>
+                    <p class="mt-2 text-gray-500">Research focused on AI and Machine Learning. Conducted extensive work
+                        in data mining and predictive modeling.</p>
+                </div>
+            </div>
         </div>
     </section>
-
-
 
     <!-- Education Section -->
-    <section id="education" class="py-12 px-4 md:px-20 bg-gray-50">
-        <h2 class="text-3xl font-bold text-gray-800 text-center">Education</h2>
-        <div class="timeline mt-8 max-w-4xl mx-auto">
-            <div class="timeline-item">
-                <div class="circle"></div>
-                <h3>Master of Computer Applications</h3>
-                <p>XYZ University, 2018</p>
+    <section id="testimonials" class="py-12 px-4 md:px-20">
+        <h2 class="text-3xl font-bold text-center">Education</h2>
+        <div class="mt-8 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Education Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Master of Computer Applications</h3>
+                    <p class="text-gray-600">XYZ University, 2018</p>
+                    <p class="mt-2 text-gray-500">Specialized in software engineering and data structures. Developed
+                        multiple projects focusing on web technologies.</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <div class="circle"></div>
-                <h3>Bachelor of Computer Applications</h3>
-                <p>ABC University, 2015</p>
+
+            <!-- Education Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Bachelor of Computer Applications</h3>
+                    <p class="text-gray-600">ABC University, 2015</p>
+                    <p class="mt-2 text-gray-500">Focused on computer programming, algorithms, and database management
+                        systems. Completed a major project on web-based applications.</p>
+                </div>
+            </div>
+
+            <!-- Education Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6">
+                <div
+                    class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Doctor of Computer Science</h3>
+                    <p class="text-gray-600">DEF University, 2023</p>
+                    <p class="mt-2 text-gray-500">Research focused on AI and Machine Learning. Conducted extensive work
+                        in data mining and predictive modeling.</p>
+                </div>
             </div>
         </div>
     </section>
 
+
     <!-- Certifications Section -->
-    <section id="certifications" class="py-12 px-4 md:px-20">
-        <h2 class="text-3xl font-bold text-gray-800 text-center">Certifications</h2>
-        <div class="timeline mt-8 max-w-4xl mx-auto">
-            <div class="timeline-item">
-                <div class="circle"></div>
-                <h3>Certified Laravel Developer</h3>
-                <p>Issued by Laravel Institute, 2021</p>
+    <section id="testimonials" class="py-12 px-4 md:px-20 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center">Certifications</h2>
+        <div class="mt-8 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Certification Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                <div
+                    class="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Certified Laravel Developer</h3>
+                <p class="mt-2 text-gray-600">Issued by Laravel Institute, 2021</p>
+                <p class="mt-2 text-gray-500">This certification demonstrates proficiency in building scalable and
+                    robust web applications using the Laravel framework.</p>
             </div>
-            <div class="timeline-item">
-                <div class="circle"></div>
-                <h3>Full Stack Web Development</h3>
-                <p>Issued by ABC Academy, 2019</p>
+
+            <!-- Certification Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                <div
+                    class="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Full Stack Web Development</h3>
+                <p class="mt-2 text-gray-600">Issued by ABC Academy, 2019</p>
+                <p class="mt-2 text-gray-500">This certification covers both frontend and backend development, providing
+                    expertise in technologies such as HTML, CSS, JavaScript, and Node.js.</p>
+            </div>
+
+            <!-- Certification Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                <div
+                    class="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Python for Data Science</h3>
+                <p class="mt-2 text-gray-600">Issued by XYZ Institute, 2022</p>
+                <p class="mt-2 text-gray-500">This certification focuses on Python for data analysis, data
+                    visualization, and machine learning using libraries like Pandas and Scikit-learn.</p>
             </div>
         </div>
     </section>
@@ -376,8 +523,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact"
-        class="py-12 px-6 md:px-20 bg-gradient-to-r from-purple-700 via-purple-500 to-purple-300 text-white">
+    <section id="contact" class="py-12 px-4 md:px-20 bg-gray-50">
         <h2 class="text-3xl font-bold text-center">Contact Me</h2>
         <p class="text-center text-lg mt-4">Let’s create something amazing together!</p>
         <form action="#" method="POST" class="mt-8 max-w-lg mx-auto bg-white p-6 rounded-xl shadow-xl space-y-4">
@@ -422,11 +568,11 @@
 
 <script>
     function openModal(modalId) {
-        document.getElementById(modalId).classList.remove('hidden');
+        document.getElementById(modalId).classList.remove("hidden");
     }
 
     function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
+        document.getElementById(modalId).classList.add("hidden");
     }
 </script>
 

@@ -17,47 +17,138 @@ body {
     background-color: var(--background-color);
 }
 
+
+/* General Styling for Header */
+/* General Styling for Header */
 header {
-    background-color: var(--primary-color);
+    background-color: #BD5500;
     color: #fff;
-    padding: 1rem 0;
+    padding: 20px 0;
 }
 
 header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
+    flex-wrap: wrap;
 }
 
-header nav ul {
+header h1 {
+    font-size: 2rem;
     display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
+    align-items: center;
     color: #fff;
-    text-decoration: none;
 }
 
-header .btn {
-    background-color: #fff;
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
+header h1 i {
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons .btn {
+    padding: 10px 20px;
+    background-color: #fea41d;
+    color: #0f0f0f;
+    border: none;
+    margin-left: 10px;
+    text-decoration: none;
     border-radius: 5px;
-    text-decoration: none;
-    margin-left: 0.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-header .btn:hover {
-    background-color: #f3f3f3;
+.buttons .btn:hover {
+    background-color: #c57600;
 }
+
+/* Mobile responsive styling */
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    nav ul li a:hover {
+        color: #f39c12;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-top: 15px;
+        display: none;
+        /* Hide buttons by default on mobile */
+    }
+
+    .buttons .btn {
+        margin-top: 10px;
+    }
+}
+
+/* Mobile menu toggle */
+nav.active ul {
+    display: flex;
+}
+
+nav.active .hamburger-menu i {
+    color: #f39c12;
+}
+
+/* Show the buttons when the mobile menu is active */
+nav.active .buttons {
+    display: flex;
+}
+
+
 
 section {
     padding: 2rem 1rem;

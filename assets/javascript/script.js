@@ -1,5 +1,12 @@
 // Optional JavaScript for interactivity
 console.log('Portfolio loaded');
+
+// Header mobile responsiveness
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('nav').classList.toggle('active');
+});
+
+
 // JavaScript for Modal Functionality
 const projects = {
     project1: {

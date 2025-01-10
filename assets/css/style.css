@@ -75,8 +75,8 @@ nav ul li a:hover {
 
 .buttons .btn {
     padding: 10px 20px;
-    background-color: #fea41d;
-    color: #0f0f0f;
+    background-color: #ffffff;
+    color: #BD5500;
     border: none;
     margin-left: 10px;
     text-decoration: none;
@@ -86,7 +86,7 @@ nav ul li a:hover {
 }
 
 .buttons .btn:hover {
-    background-color: #c57600;
+    background-color: #f39c12;
 }
 
 /* Mobile responsive styling */

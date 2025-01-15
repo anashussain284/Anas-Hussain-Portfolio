@@ -56,7 +56,32 @@ const projects = {
         contributions: "Conducted client meetings to understand business requirements and set clear project goals, Planned project timelines and assigned tasks to team members to ensure timely delivery, Developed the front-end interface and contributed to backend architecture design.",
         challenges: "Frequent design changes requested by stakeholders, impacting project timelines.",
         solution: "Implemented a modular design framework using Bootstrap to accommodate quick design iterations. Maintained clear communication with stakeholders to align expectations and prioritize changes effectively."
+    },
+    project7: {
+        name: "AlignERP Solutions",
+        overview: "A business website showcasing services, completed projects, and facilitating email communication with clients.",
+        techstacks: "HTML, CSS, Bootstrap, JavaScript, PHP",
+        contributions: "Conducted client meetings to gather requirements, planned and strategized the development process, developed the website with a focus on user experience and responsiveness.",
+        challenges: "Integrating a seamless and reliable email communication feature.",
+        solution: "Implemented a robust email integration system using PHP's mailer library to ensure smooth communication."
+    },
+    project8: {
+        name: "BioticsLab CRM",
+        overview: "A CRM software designed for managing customer interactions, streamlining operations, and facilitating team collaboration.",
+        techstacks: "PHP, Laravel, MySQL, Postman, HTML, CSS, JavaScript, Bootstrap, Ajax, jQuery, Passport",
+        contributions: "Engaged with clients to define requirements, planned the project roadmap, developed core CRM functionalities, mentored junior developers in best practices.",
+        challenges: "Automating invoice generation and implementing a robust role-based access control system.",
+        solution: "Developed a dynamic invoice generation module using PDF libraries, and integrated Laravel's Passport for secure role-based access management."
+    },
+    project9: {
+        name: "Request Logging with Docker",
+        overview: "An open-source project focused on learning and implementing Docker for containerized request logging solutions.",
+        techstacks: "Linux, Docker, PHP, Laravel, SQLite, Apache",
+        contributions: "Researched Docker and containerization best practices, planned project execution, developed a scalable application with containerized request logging functionality.",
+        challenges: "Resolving Docker image configuration conflicts during the setup process.",
+        solution: "Standardized the Docker image configuration for smooth deployment and testing."
     }
+
 };
 
 function openModal(projectId) {

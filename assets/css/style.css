@@ -4,6 +4,23 @@
     --background-color: #f9f9f9;
 }
 
+/* Footer-Specific Variables */
+footer {
+    --footer-primary-color: #BD5500;
+    /* Footer background */
+    --footer-text-color: #ffffff;
+    /* Text color for footer */
+    --footer-icon-bg: #ffffff;
+    /* Background color for icons */
+    --footer-icon-hover-bg: rgba(255, 255, 255, 0.2);
+    /* Icon hover background */
+    --footer-icon-color: #BD5500;
+    /* Default icon color */
+    --footer-icon-hover-color: #FFD700;
+    /* Hover icon color */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -175,21 +192,78 @@ section h2 {
     border-radius: 5px;
 }
 
+/* Footer Styling */
 footer {
-    background-color: var(--primary-color);
-    color: #fff;
+    background: var(--footer-primary-color);
+    color: var(--footer-text-color);
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* Text Styles */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    color: var(--footer-text-color);
+}
+
+/* Social Links */
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
 }
 
 footer .social-links a {
-    color: #fff;
-    margin: 0 0.5rem;
-    text-decoration: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--footer-icon-bg);
+    border-radius: 50%;
+    color: var(--footer-icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 footer .social-links a:hover {
-    text-decoration: underline;
+    background-color: var(--footer-icon-hover-bg);
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: var(--footer-icon-hover-color);
+}
+
+/* Footer Note */
+footer .footer-note {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    color: var(--footer-text-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    footer .social-links {
+        gap: 0.8rem;
+    }
+
+    footer .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Style for the developer icon */
@@ -241,9 +315,9 @@ header h1 i {
 }
 
 .profile-details h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
     font-size: 2rem;
-    color: #bd5500;
-    margin-bottom: 0.5rem;
 }
 
 .profile-role {
@@ -297,9 +371,9 @@ header h1 i {
 }
 
 #technologies h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
 }
 
 .technologies-list {
@@ -351,10 +425,9 @@ header h1 i {
 }
 
 .experience-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #333;
     margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 2rem;
 }
 
 .experience-grid {
@@ -404,10 +477,9 @@ header h1 i {
 }
 
 .education-section h2 {
-    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
     font-size: 2rem;
-    color: #333;
-    margin-bottom: 40px;
 }
 
 .education-grid {
@@ -516,9 +588,9 @@ header h1 i {
 }
 
 #services h2 {
-    font-size: 2rem;
     margin-bottom: 2rem;
-    color: #bd5500;
+    color: var(--primary-color);
+    font-size: 2rem;
 }
 
 .services-grid {
@@ -562,9 +634,9 @@ header h1 i {
 }
 
 #portfolio h2 {
-    font-size: 2rem;
     margin-bottom: 2rem;
-    color: #bd5500;
+    color: var(--primary-color);
+    font-size: 2rem;
 }
 
 .portfolio-grid {

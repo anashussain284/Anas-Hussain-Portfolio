@@ -80,8 +80,30 @@ const projects = {
         contributions: "Researched Docker and containerization best practices, planned project execution, developed a scalable application with containerized request logging functionality.",
         challenges: "Resolving Docker image configuration conflicts during the setup process.",
         solution: "Standardized the Docker image configuration for smooth deployment and testing."
-    }
-
+    },project10: {
+        name: "QTC Airdrop",
+        overview: "A website developed for secure and efficient QTC cryptocurrency airdrops with blockchain transaction integration.",
+        techstacks: "PHP, Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, TronLink, Google FCM",
+        contributions: "Planned and strategized the project, developed the backend architecture, designed the database, and integrated blockchain transactions with TronLink.",
+        challenges: "Integrating blockchain transactions seamlessly into the application.",
+        solution: "Successfully implemented blockchain transaction integration using TronLink, ensuring secure and reliable cryptocurrency airdrops."
+    },
+    project11: {
+        name: "Mind Max",
+        overview: "An e-learning platform offering interactive lessons and a dynamic analytical dashboard for tracking student performance.",
+        techstacks: "PHP, Laravel, MySQL, HTML, CSS, JavaScript, Ajax, Canvas.js, Analytics",
+        contributions: "Planned the platform architecture, developed core functionalities, and created an analytical dashboard for visualizing dynamic data.",
+        challenges: "Implementing real-time data analysis and visualization for the dashboard.",
+        solution: "Developed a dynamic data analysis and visualization module using Canvas.js, ensuring accurate and interactive performance tracking."
+    },
+    project12: {
+        name: "UniquQatar",
+        overview: "A business website showcasing services, completed projects, and facilitating efficient client communication.",
+        techstacks: "PHP, Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript",
+        contributions: "Revamped the entire website, planned and executed workflow improvements, designed a modern user interface, and optimized performance.",
+        challenges: "Configuring and upgrading an existing Laravel project for better maintainability and performance.",
+        solution: "Resolved configuration issues and implemented performance optimizations, resulting in a more efficient and user-friendly website."
+    }   
 };
 
 function openModal(projectId) {
